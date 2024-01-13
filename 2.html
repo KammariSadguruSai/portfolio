@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Webpage</title>
+  <style>
+    /* Add some basic styling for the overlay */
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 9999;
+      text-align: center;
+      padding-top: 20%;
+    }
+
+    #overlay img {
+      width: 50px; /* You can adjust the size of the loading spinner */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- The overlay container -->
+  <div id="overlay">
+    <img src="https://echallan.tspolice.gov.in/publicview/images/loading1.gif" alt="Loading...">
+  </div>
+
+  <!-- Your webpage content goes here -->
+  <h1>Your Webpage Content</h1>
+  <p>Some content here...</p>
+
+  <script>
+    // Display the overlay when the page is loaded or refreshed
+    document.addEventListener('DOMContentLoaded', function () {
+      showOverlay();
+
+      // Hide the overlay after a certain delay (simulating some loading time)
+      setTimeout(hideOverlay, 2000); // Adjust the delay as needed
+    });
+
+    // Function to show the overlay
+    function showOverlay() {
+      document.getElementById('overlay').style.display = 'block';
+    }
+
+    // Function to hide the overlay
+    function hideOverlay() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
+
+
+<div id="overlay">
+  <img src="your_loading_gif_url.gif" alt="Loading...">
+</div>
+
+<script>
+  // Display the overlay when the page is loaded or refreshed
+  document.addEventListener('DOMContentLoaded', function () {
+    showOverlay();
+
+    // Hide the overlay after a certain delay (simulating some loading time)
+    setTimeout(hideOverlay, 2000); // Adjust the delay as needed
+  });
+
+  // Function to show the overlay
+  function showOverlay() {
+    document.getElementById('overlay').style.display = 'block';
+  }
+
+  // Function to hide the overlay
+  function hideOverlay() {
+    document.getElementById('overlay').style.display = 'none';
+  }
+</script>
